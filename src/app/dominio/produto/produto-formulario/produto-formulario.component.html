@@ -1,0 +1,17 @@
+PRODUTO FORMULARIO
+
+<form [formGroup]="produtoForm" >
+    <label>Nome:
+        <input class="form-control" formControlName="nome" type="text">
+    </label>
+    <br>
+    <label>Descrição:
+        <input class="form-control" formControlName="descricao" type="text">
+    </label>
+    <br>
+    <label>Preço:
+        <input class="form-control" formControlName="preco" type="number">
+    </label>
+    <br>
+    <button (click)="salvar(produtoForm.value)" class="btn btn-success">Salvar</button>
+</form>
