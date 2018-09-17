@@ -1,70 +1,78 @@
-
-
-
 <!-- MEIO -->
 <div class="row meio">
-        
-                <!-- MENU VERTICAL -->
-                <div class="col-3 menu-vertical">
-        
-        
-                    <ul class="nav flex-column">
-                        <li class="nav-item item-info">
-                            Categoria
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Teclado e Mouse</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">SSD</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cadeira Gamer</a>
-                        </li>
-                    </ul>
-        
-                    <ul class="nav flex-column">
-                            <li class="nav-item item-info">
-                                Administrativo
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" [routerLink]="['produto']">Produtos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Categorias</a>
-                            </li>
-                        </ul>
-        
-                </div>
-        
-                <!-- CONTEUDO -->
-                <div class="col-9">
-                        <h1>Lista de Produtos</h1>
-                    <!-- start: page -->
-                    <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Preco</th>
-                                    <th scope="col">Operações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let produto of produtos">
-                                    <th>{{produto.id}}</th>
-                                    <td>{{produto.nome}}</td>
-                                    <td>{{produto.preco}}</td>
-                                    <td>
-                                        <a [routerLink]="['/produto/alterar',produto.id]" >Alterar</a> | 
-                                        <a [routerLink]="['produto']" (click)="excluir(produto.id)">Excluir</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <a class="btn btn-primary" [routerLink]="['/produto/novo']">Adicionar Produto</a>
-                    <!-- end: page --> 
-        
-                </div>
-            </div>
+
+  <!-- MENU VERTICAL -->
+  <div class="col-2 col-md-3 menu-vertical">
+
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['produto']">
+          <img src="assets/imagens/tokaji-vineria-icone-produtos.png" />
+          <p>Produtos</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <img src="assets/imagens/tokaji-vineria-icone-categorias.png" />
+          <p>Categorias</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <img src="assets/imagens/tokaji-vineria-icone-nacionalidades.png" />
+          <p>Nacionalidades</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <img src="assets/imagens/tokaji-vineria-icone-harmonizacoes.png" />
+          <p>Harmonizações</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <img src="assets/imagens/tokaji-vineria-icone-fornecedores.png" />
+          <p>Fornecedores</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <img src="assets/imagens/tokaji-vineria-icone-funcionarios.png" />
+          <p>Funcionários</p>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- CONTEUDO -->
+  <div class="col-10 col-md-9">
+    <h1>Lista de Produtos</h1>
+    <!-- start: page -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Preco</th>
+          <th scope="col">Operações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of produtos">
+          <th>{{produto.id}}</th>
+          <td>{{produto.nome}}</td>
+          <td>{{produto.preco}}</td>
+          <td>
+            <a [routerLink]="['/produto/alterar',produto.id]">Alterar</a> |
+            <a [routerLink]="['produto']" (click)="excluir(produto.id)">Excluir</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a class="btn btn-primary" [routerLink]="['/produto/novo']">Adicionar Produto</a>
+    <!-- end: page -->
+
+  </div>
+</div>

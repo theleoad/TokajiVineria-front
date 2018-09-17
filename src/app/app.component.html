@@ -1,75 +1,84 @@
 <div class="container">
 
-	<!-- TOPO -->
-	<div class="row topo">
-		<div class="col-5">
-			<img class="logo" src="assets/imagens/tokavi-vineria-logo-invertida.png" />
-		</div>
-		<div class="col-7">
-			<div class="row menu-icone">
-				<div class="col-2 offset-8">
-					<div>
-						<img src="assets/imagens/tokaji-vineria-icone-conta.png" />
-						<span>Conta</span>
-					</div>
-				</div>
-				<div class="col-2">
-					<div>
-						<img style="margin-left: -5px;" src="assets/imagens/tokaji-vineria-icone-carrinho.png" />
-						<span>Carrinho</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+  <!-- TOPO -->
+  <div class="row topo">
+    <div class="col-12 col-md-5">
+      <img class="logo" src="assets/imagens/tokavi-vineria-logo-invertida.png" />
+    </div>
+    <div class="col-12 col-md-7">
+      <div class="row menu-icone">
+        <div class="col-2 offset-md-6">
+          <div>
+            <img src="assets/imagens/tokaji-vineria-icone-conta.png" />
+            <span>
+              <a [routerLink]="['produto']">Conta</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <img src="assets/imagens/tokaji-vineria-icone-meus-vinhos.png" />
+            <span>
+              <a>Meus Vinhos</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <img src="assets/imagens/tokaji-vineria-icone-carrinho.png" />
+            <span>
+              <a>Carrinho</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<!-- MENU HORIZONTAL -->
-	<div class="row menu-horizontal">
-		<div class="col-12">
 
-			<ul class="nav">
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Sobre</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Produtos</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contato</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" [routerLink]="['produto']">Área Administrativa</a>
-				</li>				
-			</ul>
+  <!-- MENU HORIZONTAL -->
+  <div class="row menu-horizontal">
+    <div class="col-12">
 
-		</div>
-	</div>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contato</a>
+        </li>
+      </ul>
 
-	<!-- MEIO -->
-	<div class="row meio">
+    </div>
+  </div>
 
-		<!-- MENU VERTICAL -->
-		
+  <!-- MEIO -->
+  <div class="row meio">
 
-		<!-- CONTEUDO -->
-		<div class="col-12">
+    <!-- MENU VERTICAL -->
 
-			<!-- start: page -->
-			<router-outlet></router-outlet>
-			<!-- end: page --> 
 
-		</div>
-	</div>
+    <!-- CONTEUDO -->
+    <div class="col-12">
 
-	<!-- RODAPE -->
-	<div class="row footer">
-		<div class="col rodape">
-			<p> {{title}} &#174; Direitos Reservados </p>
-		</div>
-	</div>
+      <!-- start: page -->
+      <router-outlet></router-outlet>
+      <!-- end: page -->
+
+    </div>
+  </div>
+
+  <!-- RODAPE -->
+  <div class="row footer">
+    <div class="col rodape">
+      <p> {{title}} &#174; Direitos Reservados </p>
+    </div>
+  </div>
 
 </div>

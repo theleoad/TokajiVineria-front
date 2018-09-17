@@ -21,7 +21,7 @@
   max-width: 28px;
 }
 
-.menu-icone span {
+.menu-icone span a {
   color: #f8f9fa;
   font-size: 12px;
   font-weight: bold;
@@ -58,4 +58,19 @@
   text-align: center;
 }
 
-/***** testes ****/
+/*Media Queries*/
+
+@media only screen and (max-width: 768px) {
+  .menu-icone {
+    justify-content: center !important;
+  }
+  .topo div {
+    text-align: center;
+  }
+  .topo {
+    padding-bottom: 10px;
+  }
+  .logo {
+    padding-bottom: 0;
+  }
+}
