@@ -1,0 +1,45 @@
+
+.container {
+  padding: 0;
+}
+
+.product-list-wimage {
+  margin: 20px 0;
+}
+
+.single-product img {
+    max-height: 220px;
+    display: block;
+    margin: 0 auto;
+}
+
+.single-product h5 {
+    text-align: center;
+}
+
+.price-box {
+    width: 90%;
+    margin: 0 auto;
+    background-color: darkgray;
+    padding: 15px 5px;
+    border-radius: 3px;
+}
+
+.price-box div {
+  text-align: center;
+}
+
+.price-box p {
+    margin-bottom: 0; 
+    color: black;
+    font-weight: bold;
+}
+
+.price-box a {
+    background-color: #7fbc44;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+}

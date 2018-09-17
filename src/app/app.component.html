@@ -2,8 +2,24 @@
 
 	<!-- TOPO -->
 	<div class="row topo">
-		<div class="col">
+		<div class="col-5">
 			<img class="logo" src="assets/imagens/tokavi-vineria-logo-invertida.png" />
+		</div>
+		<div class="col-7">
+			<div class="row menu-icone">
+				<div class="col-2 offset-8">
+					<div>
+						<img src="assets/imagens/tokaji-vineria-icone-conta.png" />
+						<span>Conta</span>
+					</div>
+				</div>
+				<div class="col-2">
+					<div>
+						<img style="margin-left: -5px;" src="assets/imagens/tokaji-vineria-icone-carrinho.png" />
+						<span>Carrinho</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	
@@ -25,52 +41,22 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">Contato</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" [routerLink]="['produto']">Área Administrativa</a>
+				</li>				
 			</ul>
 
 		</div>
 	</div>
-	<div class="row slide">
-			<img src="assets/imagens/vinho-apothic-slide-1.jpg">
-		</div>
 
 	<!-- MEIO -->
 	<div class="row meio">
 
 		<!-- MENU VERTICAL -->
-		<div class="col-3 menu-vertical">
-
-
-			<ul class="nav flex-column">
-				<li class="nav-item item-info">
-					Categoria
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Teclado e Mouse</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">SSD</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Cadeira Gamer</a>
-				</li>
-			</ul>
-
-			<ul class="nav flex-column">
-					<li class="nav-item item-info">
-						Administrativo
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" [routerLink]="['produto']">Produtos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Categorias</a>
-					</li>
-				</ul>
-
-		</div>
+		
 
 		<!-- CONTEUDO -->
-		<div class="col-9">
+		<div class="col-12">
 
 			<!-- start: page -->
 			<router-outlet></router-outlet>

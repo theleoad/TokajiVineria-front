@@ -1,21 +1,40 @@
 
 .container {
-    background-color: black; 
+    background-color: white; 
     padding: 0;
 }
 
 /* TOPO */
 .topo {
     margin: 30px 0 0;
+    background-color: black; 
 }
 .logo{
     width: 210px;
     padding: 20px 0;
 }
 
-.slide {
-  margin: 0;
+.menu-icone {
+    margin-top: 32px;
 }
+
+.menu-icone img {
+    max-width: 28px;
+}
+
+.menu-icone span {
+    color:#f8f9fa; 
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+}
+
+.menu-icone div div {
+    text-align: center;
+
+}
+
+
 
 
 /* MENU HORIZONTAL */
@@ -34,29 +53,17 @@
 }
 
 
-/* MENU VERTICAL */
-.menu-vertical{
-    background-color: #f0f0f0;
-    padding: 10px;
-}
 
-.menu-vertical a {
-    text-transform: uppercase;
-}
-
-.menu-vertical .item-info{
-    font-weight: bold;
-}
 
 
 /*RODAPE*/
 .footer {
-  background-color: white;
+  background-color: black;  
   margin: 0 0 10px;
-  padding-top: 10px; 
+  padding-top: 18px; 
 
 }
 .rodape p {
     text-align: center;
-    color: black;
+    color: #f8f9fa;
 }

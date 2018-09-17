@@ -16,10 +16,7 @@ export class ProdutoService {
 
     buscarTodos(): Observable<Produto[]> {
         return this.http
-            .get<Produto[]>(`${this.URL}/produto`)
-            .pipe(
-                map(response => response)
-            );
+            .get<Produto[]>(`${this.URL}/produto`);
     }
 
     buscarPeloId(id: number): Observable<Produto> {
@@ -40,25 +37,20 @@ export class ProdutoService {
 
         if (produto.id) {
             return this.http
-                .put<Produto>(`${this.URL}/produto`, JSON.stringify(produto), httpOptions)
-                .pipe(
-                    map(response => response)
+                .put<Produto>(
+                    `${this.URL}/produto`, 
+                    JSON.stringify(produto), 
+                    httpOptions
                 );
         } else {
             return this.http
-                .post<Produto>(`${this.URL}/produto`, JSON.stringify(produto), httpOptions)
-                .pipe(
-                    map(response => response)
-                );
+                .post<Produto>(`${this.URL}/produto`, JSON.stringify(produto), httpOptions);
         }
     }
 
-    delete(id: number): Observable<any> {
+    excluir(id: number): Observable<any> {
         return this.http
-            .delete(`${this.URL}/produto/${id}`)
-            .pipe(
-                map(response => response)
-            );
+            .delete(`${this.URL}/produto/${id}`);
     }
 
 }
