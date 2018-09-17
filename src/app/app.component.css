@@ -1,69 +1,59 @@
-
 .container {
-    background-color: white; 
-    padding: 0;
+  background-color: white;
+  padding: 0;
 }
 
 /* TOPO */
 .topo {
-    margin: 30px 0 0;
-    background-color: black; 
+  margin: 30px 0 0;
+  background-color: black;
 }
-.logo{
-    width: 210px;
-    padding: 20px 0;
+.logo {
+  width: 210px;
+  padding: 20px 0;
 }
 
 .menu-icone {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 .menu-icone img {
-    max-width: 28px;
+  max-width: 28px;
 }
 
 .menu-icone span {
-    color:#f8f9fa; 
-    font-size: 12px;
-    font-weight: bold;
-    display: block;
+  color: #f8f9fa;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
 }
 
 .menu-icone div div {
-    text-align: center;
-
+  text-align: center;
 }
-
-
-
 
 /* MENU HORIZONTAL */
-.menu-horizontal{
-    padding: 5px 0px;
-    background-color: #3D3D3D;
-    margin: 0;
+.menu-horizontal {
+  background-color: #3d3d3d;
+  margin: 0;
+  padding: 5px 0px;
 }
 .menu-horizontal a {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* MEIO */
-.meio{
-    margin: 0;
+.meio {
+  margin: 0;
 }
-
-
-
-
 
 /*RODAPE*/
 .footer {
-  background-color: black;  
+  background-color: black;
   margin: 0 0 10px;
-  padding-top: 18px; 
-
+  padding-top: 18px;
 }
 .rodape p {
-    text-align: center;
-    color: #f8f9fa;
+  color: #f8f9fa;
+  text-align: center;
 }
