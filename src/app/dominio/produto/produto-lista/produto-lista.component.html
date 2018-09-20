@@ -6,37 +6,37 @@
 
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['produto']">
+        <a class="nav-link" [routerLink]="['../produto']">
           <img src="assets/imagens/tokaji-vineria-icone-produtos.png" />
           <p>Produtos</p>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" [routerLink]="['../categoria']">
           <img src="assets/imagens/tokaji-vineria-icone-categorias.png" />
           <p>Categorias</p>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" [routerLink]="['../nacionalidade']">
           <img src="assets/imagens/tokaji-vineria-icone-nacionalidades.png" />
           <p>Nacionalidades</p>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" [routerLink]="['../harmonizacao']">
           <img src="assets/imagens/tokaji-vineria-icone-harmonizacoes.png" />
           <p>Harmonizações</p>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" [routerLink]="['../fornecedor']">
           <img src="assets/imagens/tokaji-vineria-icone-fornecedores.png" />
           <p>Fornecedores</p>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" [routerLink]="['../funcionario']">
           <img src="assets/imagens/tokaji-vineria-icone-funcionarios.png" />
           <p>Funcionários</p>
         </a>
@@ -47,32 +47,33 @@
 
   <!-- CONTEUDO -->
   <div class="col-10 col-md-9">
-    <h1>Lista de Produtos</h1>
-    <!-- start: page -->
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Preco</th>
-          <th scope="col">Operações</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let produto of produtos">
-          <th>{{produto.id}}</th>
-          <td>{{produto.nome}}</td>
-          <td>{{produto.preco}}</td>
-          <td>
-            <a [routerLink]="['/produto/alterar',produto.id]">Alterar</a> |
-            <a [routerLink]="['produto']" (click)="excluir(produto.id)">Excluir</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container-adm">
+      <h1>Lista de Produtos</h1>
+      <!-- start: page -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Operações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of produtos">
+            <th>{{produto.id}}</th>
+            <td>{{produto.nome}}</td>
+            <td>{{produto.preco}}</td>
+            <td>
+              <a [routerLink]="['/produto/alterar',produto.id]">Alterar</a> |
+              <a [routerLink]="['produto']" (click)="excluir(produto.id)">Excluir</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-    <a class="btn btn-primary" [routerLink]="['/produto/novo']">Adicionar Produto</a>
-    <!-- end: page -->
-
+      <a class="btn btn-primary" [routerLink]="['/produto/novo']">Adicionar Produto</a>
+      <!-- end: page -->
+    </div>
   </div>
 </div>

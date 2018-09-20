@@ -38,6 +38,26 @@ const appRoutes: Routes = [
   {
     path: "meusvinhos",
     loadChildren: "./dominio/meusvinhos/meusvinhos.module#MeusvinhosModule"
+  },
+  {
+    path: "novacat",
+    loadChildren: "./dominio/categoria/novaCat/novaCat.module#NovaCatModule"
+  },
+  {
+    path: "novofor",
+    loadChildren: "./dominio/fornecedor/novoFor/novoFor.module#NovoForModule"
+  },
+  {
+    path: "novofun",
+    loadChildren: "./dominio/funcionario/novoFun/novoFun.module#NovoFunModule"
+  },
+  {
+    path: "novahar",
+    loadChildren: "./dominio/harmonizacao/novaHar/novaHar.module#NovaHarModule"
+  },
+  {
+    path: "novanac",
+    loadChildren: "./dominio/nacionalidade/novaNac/novaNac.module#NovaNacModule"
   }
 ];
 

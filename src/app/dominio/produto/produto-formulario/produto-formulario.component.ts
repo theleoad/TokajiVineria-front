@@ -32,8 +32,8 @@ export class ProdutoFormularioComponent implements OnInit {
     this.produto.id = this.route.snapshot.params['id'];
 
     /* Altera o título da página */
-    this.titulo = (this.produto.id == null) 
-    ? 'Novo Produto' 
+    this.titulo = (this.produto.id == null)
+    ? 'Novo Produto'
     : 'Alterar Produto';
 
     /* Reactive Forms */
@@ -60,7 +60,7 @@ export class ProdutoFormularioComponent implements OnInit {
   salvar(produto: Produto) {
     if (this.produtoForm.invalid) {
       console.log("Erro no formulário");
-    } 
+    }
     else {
       this.produtoService.salvar(produto)
       .subscribe(response => {

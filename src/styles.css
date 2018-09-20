@@ -1,19 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800');
+@import url("https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800");
 
 body {
-    background-image: url(assets/imagens/tokavi-vineria-bg.jpg);
-    background-size: contain;    
+  background-image: url(assets/imagens/tokavi-vineria-bg.jpg);
+  background-size: contain;
 }
 
-
-
-h1, h2, h3, h4, h5, h6, p, th, tr, a, input, label  {
-    color: #343a40;
-    font-family: 'Mukta', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+tr,
+a,
+input,
+label {
+  color: #343a40;
+  font-family: "Mukta", sans-serif;
 }
 
 a {
-    color: #ea0429;
+  color: #ea0429;
+}
+.container-adm {
+  padding-top: 10px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-primary:last-of-type {
+  margin-right: 0;
+}
+
+/* MENU VERTICAL */
+.menu-vertical {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-vertical a {
+  text-transform: uppercase;
+}
+
+.menu-vertical .item-info {
+  font-weight: bold;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 768px) {
+  .menu-vertical li {
+    transform: rotate(-90deg);
+  }
+  .menu-vertical li p {
+    display: none;
+  }
+  .menu-vertical img {
+    width: 36px;
+  }
+  .menu-vertical {
+    padding: 5px;
+  }
 }
