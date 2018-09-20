@@ -5,6 +5,10 @@ const appRoutes: Routes = [
   // { path: '', redirectTo: '/', pathMatch: 'full'},
   { path: "", loadChildren: "./dominio/home/home.module#HomeModule" },
   {
+    path: "home",
+    loadChildren: "./dominio/home/home.module#HomeModule"
+  },
+  {
     path: "produto",
     loadChildren: "./dominio/produto/produto.module#ProdutoModule"
   },
@@ -38,6 +42,11 @@ const appRoutes: Routes = [
   {
     path: "meusvinhos",
     loadChildren: "./dominio/meusvinhos/meusvinhos.module#MeusvinhosModule"
+  },
+  {
+    path: "emconstrucao",
+    loadChildren:
+      "./dominio/emconstrucao/emconstrucao.module#EmconstrucaoModule"
   },
   {
     path: "novacat",

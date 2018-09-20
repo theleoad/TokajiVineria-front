@@ -9,25 +9,31 @@
       <div class="row menu-icone">
         <div class="col-2 offset-md-6">
           <div>
-            <img src="assets/imagens/tokaji-vineria-icone-conta.png" />
+            <a [routerLink]="['areaadministrativa']">
+              <img src="assets/imagens/tokaji-vineria-icone-conta.png" />
+            </a>
             <span>
-              <a [routerLink]="['produto']">Conta</a>
+              <a [routerLink]="['areaadministrativa']">Conta</a>
             </span>
           </div>
         </div>
         <div class="col-2">
           <div>
-            <img src="assets/imagens/tokaji-vineria-icone-meus-vinhos.png" />
+            <a [routerLink]="['meusvinhos']">
+              <img src="assets/imagens/tokaji-vineria-icone-meus-vinhos.png" />
+            </a>
             <span>
-              <a>Meus Vinhos</a>
+              <a [routerLink]="['meusvinhos']">Meus Vinhos</a>
             </span>
           </div>
         </div>
         <div class="col-2">
           <div>
-            <img src="assets/imagens/tokaji-vineria-icone-carrinho.png" />
+            <a [routerLink]="['emconstrucao']">
+              <img src="assets/imagens/tokaji-vineria-icone-carrinho.png" />
+            </a>
             <span>
-              <a>Carrinho</a>
+              <a [routerLink]="['emconstrucao']">Carrinho</a>
             </span>
           </div>
         </div>
@@ -45,13 +51,13 @@
           <a class="nav-link active" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sobre</a>
+          <a class="nav-link" [routerLink]="['emconstrucao']">Sobre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Produtos</a>
+          <a class="nav-link" [routerLink]="['emconstrucao']">Produtos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contato</a>
+          <a class="nav-link" [routerLink]="['emconstrucao']">Contato</a>
         </li>
       </ul>
 

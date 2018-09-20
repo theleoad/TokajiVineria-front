@@ -6,6 +6,10 @@
   margin: 20px 0;
 }
 
+.single-product {
+  margin-bottom: 20px;
+}
+
 .single-product img {
   max-height: 220px;
   display: block;
