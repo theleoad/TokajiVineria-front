@@ -49,10 +49,6 @@ const appRoutes: Routes = [
       "./dominio/emconstrucao/emconstrucao.module#EmconstrucaoModule"
   },
   {
-    path: "novacat",
-    loadChildren: "./dominio/categoria/novaCat/novaCat.module#NovaCatModule"
-  },
-  {
     path: "novofor",
     loadChildren: "./dominio/fornecedor/novoFor/novoFor.module#NovoForModule"
   },

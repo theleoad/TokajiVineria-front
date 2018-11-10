@@ -1,9 +1,7 @@
 <!-- MEIO -->
 <div class="row meio">
-
   <!-- MENU VERTICAL -->
   <div class="col-2 col-md-3 menu-vertical">
-
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['../produto']">
@@ -42,7 +40,6 @@
         </a>
       </li>
     </ul>
-
   </div>
 
   <!-- CONTEUDO -->
@@ -55,38 +52,29 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
+            <th scope="col">Preço</th>
             <th scope="col">Operações</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td>Tinto</td>
+          <tr *ngFor="let categoria of categorias">
+            <th>{{ categoria.id }}</th>
+            <td>{{ categoria.nome }}</td>
+            <td>{{ categoria.preco }}</td>
             <td>
-              <a href="#">Alterar</a> |
-              <a href="#">Excluir</a>
-            </td>
-          </tr>
-          <tr>
-            <th>2</th>
-            <td>Branco</td>
-            <td>
-              <a href="#">Alterar</a> |
-              <a href="#">Excluir</a>
-            </td>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td>Brut</td>
-            <td>
-              <a href="#">Alterar</a> |
-              <a href="#">Excluir</a>
+              <a [routerLink]="['/categoria/alterar', categoria.id]">Alterar</a>
+              |
+              <a [routerLink]="['categoria']" (click)="excluir(categoria.id)"
+                >Excluir</a
+              >
             </td>
           </tr>
         </tbody>
       </table>
 
-      <a class="btn btn-primary" [routerLink]="['../novacat']">Adicionar Categoria</a>
+      <a class="btn btn-primary" [routerLink]="['/categoria/novo']"
+        >Adicionar Categoria</a
+      >
       <!-- end: page -->
     </div>
   </div>
