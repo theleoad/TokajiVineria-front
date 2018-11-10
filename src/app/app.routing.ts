@@ -55,14 +55,6 @@ const appRoutes: Routes = [
   {
     path: "novofun",
     loadChildren: "./dominio/funcionario/novoFun/novoFun.module#NovoFunModule"
-  },
-  {
-    path: "novahar",
-    loadChildren: "./dominio/harmonizacao/novaHar/novaHar.module#NovaHarModule"
-  },
-  {
-    path: "novanac",
-    loadChildren: "./dominio/nacionalidade/novaNac/novaNac.module#NovaNacModule"
   }
 ];
 

@@ -1,3 +1,4 @@
+import { HarmonizacaoService } from "./../harmonizacao/harmonizacao.service";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -9,6 +10,7 @@ import { ProdutoService } from "./produto.service";
 import { ProdutoListaComponent } from "./produto-lista/produto-lista.component";
 import { ProdutoFormularioComponent } from "./produto-formulario/produto-formulario.component";
 import { CategoriaService } from "src/app/dominio/categoria/categoria.service";
+import { NacionalidadeService } from "src/app/dominio/nacionalidade/nacionalidade.service";
 
 @NgModule({
   declarations: [ProdutoListaComponent, ProdutoFormularioComponent],
@@ -25,6 +27,8 @@ import { CategoriaService } from "src/app/dominio/categoria/categoria.service";
   ],
   providers: [
     // Serviços
+    HarmonizacaoService,
+    NacionalidadeService,
     CategoriaService,
     ProdutoService
   ]

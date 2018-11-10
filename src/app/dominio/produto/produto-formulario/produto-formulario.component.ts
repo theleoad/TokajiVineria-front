@@ -1,3 +1,6 @@
+import { HarmonizacaoService } from "./../../harmonizacao/harmonizacao.service";
+import { Harmonizacao } from "./../../harmonizacao/harmonizacao";
+import { NacionalidadeService } from "src/app/dominio/nacionalidade/nacionalidade.service";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
@@ -6,6 +9,7 @@ import { Produto } from "../produto";
 import { ProdutoService } from "../produto.service";
 import { Categoria } from "src/app/dominio/categoria/categoria";
 import { CategoriaService } from "src/app/dominio/categoria/categoria.service";
+import { Nacionalidade } from "src/app/dominio/nacionalidade/nacionalidade";
 
 @Component({
   selector: "produto-lista",
@@ -17,13 +21,17 @@ export class ProdutoFormularioComponent implements OnInit {
   produtoForm: FormGroup;
   titulo: string;
   categorias: Categoria[];
+  nacionalidades: Nacionalidade[];
+  harmonizacaos: Harmonizacao[];
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private builder: FormBuilder,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private nacionalidadeService: NacionalidadeService,
+    private harmonizacaoService: HarmonizacaoService
   ) {}
 
   ngOnInit() {
@@ -45,10 +53,22 @@ export class ProdutoFormularioComponent implements OnInit {
         ]),
         descricao: this.builder.control("", [Validators.required]),
         preco: this.builder.control("", [Validators.required]),
-        categoria: this.builder.control("", [Validators.required])
+        categoria: this.builder.control("", [Validators.required]),
+        nacionalidade: this.builder.control("", [Validators.required]),
+        harmonizacao: this.builder.control("", [Validators.required])
       },
       {}
     );
+
+    // busca as harmonizacoes
+    this.harmonizacaoService.buscarTodos().subscribe(resposta => {
+      this.harmonizacaos = resposta;
+    });
+
+    // busca as nacionalidades
+    this.nacionalidadeService.buscarTodos().subscribe(resposta => {
+      this.nacionalidades = resposta;
+    });
 
     // busca as categorias
     this.categoriaService.buscarTodos().subscribe(resposta => {

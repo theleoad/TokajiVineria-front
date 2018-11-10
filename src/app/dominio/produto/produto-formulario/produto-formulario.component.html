@@ -83,6 +83,36 @@
         </div>
 
         <div class="form-group">
+          <label for="nacionalidade">Nacionalidade</label>
+          <select
+            class="form-control"
+            formControlName="nacionalidade"
+            [compareWith]="compararFn"
+          >
+            <option
+              *ngFor="let nacionalidade of nacionalidades"
+              [ngValue]="nacionalidade"
+              >{{ nacionalidade.nome }}</option
+            >
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="harmonizacao">Harmonização</label>
+          <select
+            class="form-control"
+            formControlName="harmonizacao"
+            [compareWith]="compararFn"
+          >
+            <option
+              *ngFor="let harmonizacao of harmonizacaos"
+              [ngValue]="harmonizacao"
+              >{{ harmonizacao.nome }}</option
+            >
+          </select>
+        </div>
+
+        <div class="form-group">
           <label for="descricao">Descrição</label>
           <textarea
             type="text"
