@@ -1,9 +1,11 @@
 <div class="container">
-
   <!-- TOPO -->
   <div class="row topo">
     <div class="col-12 col-md-5">
-      <img class="logo" src="assets/imagens/tokavi-vineria-logo-invertida.png" />
+      <img
+        class="logo"
+        src="assets/imagens/tokavi-vineria-logo-invertida.png"
+      />
     </div>
     <div class="col-12 col-md-7">
       <div class="row menu-icone">
@@ -12,9 +14,7 @@
             <a [routerLink]="['areaadministrativa']">
               <img src="assets/imagens/tokaji-vineria-icone-conta.png" />
             </a>
-            <span>
-              <a [routerLink]="['areaadministrativa']">Conta</a>
-            </span>
+            <span> <a [routerLink]="['areaadministrativa']">Conta</a> </span>
           </div>
         </div>
         <div class="col-2">
@@ -22,34 +22,29 @@
             <a [routerLink]="['meusvinhos']">
               <img src="assets/imagens/tokaji-vineria-icone-meus-vinhos.png" />
             </a>
-            <span>
-              <a [routerLink]="['meusvinhos']">Meus Vinhos</a>
-            </span>
+            <span> <a [routerLink]="['meusvinhos']">Meus Vinhos</a> </span>
           </div>
         </div>
         <div class="col-2">
-          <div>
-            <a [routerLink]="['emconstrucao']">
-              <img src="assets/imagens/tokaji-vineria-icone-carrinho.png" />
-            </a>
-            <span>
-              <a [routerLink]="['emconstrucao']">Carrinho</a>
-            </span>
-          </div>
+          <!--
+            <div>
+              <a [routerLink]="['emconstrucao']">
+                <img src="assets/imagens/tokaji-vineria-icone-carrinho.png" />
+              </a>
+              <span> <a [routerLink]="['emconstrucao']">Carrinho</a> </span>
+            </div>
+          -->
+          <carrinho-widget></carrinho-widget>
         </div>
       </div>
     </div>
   </div>
 
-
   <!-- MENU HORIZONTAL -->
   <div class="row menu-horizontal">
     <div class="col-12">
-
       <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['emconstrucao']">Sobre</a>
         </li>
@@ -60,31 +55,25 @@
           <a class="nav-link" [routerLink]="['emconstrucao']">Contato</a>
         </li>
       </ul>
-
     </div>
   </div>
 
   <!-- MEIO -->
   <div class="row meio">
-
     <!-- MENU VERTICAL -->
-
 
     <!-- CONTEUDO -->
     <div class="col-12">
-
       <!-- start: page -->
       <router-outlet></router-outlet>
       <!-- end: page -->
-
     </div>
   </div>
 
   <!-- RODAPE -->
   <div class="row footer">
     <div class="col rodape">
-      <p> {{title}} &#174; Direitos Reservados </p>
+      <p>{{ title }} &#174; Direitos Reservados</p>
     </div>
   </div>
-
 </div>

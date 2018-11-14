@@ -1,0 +1,35 @@
+<div class="row product-list-wimage">
+  <!--
+    <div class="card" style="width: 18rem;" *ngFor="let produto of produtos">
+      <img class="card-img-top" src="" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{ produto.nome }}</h5>
+        <p class="card-text">{{ produto.descricao }}</p>
+        <p class="card-text">R$ {{ produto.preco }}</p>
+        <a class="btn btn-primary" (click)="adicionarProduto(produto)">Comprar</a>
+      </div>
+    </div>
+  -->
+  <div
+    class="col-12 col-md-6 col-lg-3 single-product"
+    *ngFor="let produto of produtos"
+  >
+    <img
+      src="assets/imagens/vinhos/tokaji-vineria-espumante-jp-extra-brut.png"
+    />
+    <h5>{{ produto.nome }}</h5>
+    <div class="row price-box">
+      <div class="col-6">
+        <p>R$ {{ produto.preco }}</p>
+      </div>
+      <div class="col-6">
+        <p><a (click)="adicionarProduto(produto)">Comprar</a></p>
+      </div>
+    </div>
+    <div class="row favoritos">
+      <div class="col-12 text-center">
+        <span><i class="fas fa-heart"></i> Meus Vinhos</span>
+      </div>
+    </div>
+  </div>
+</div>

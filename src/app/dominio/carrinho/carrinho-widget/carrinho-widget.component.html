@@ -1,0 +1,26 @@
+<!--
+  <div class="carrinho-widget text-right">
+    <img src="assets/imagens/cart.png" /> <br />
+    <div>
+      <span class="badge badge-light">{{ qtd }}</span> Itens
+    </div>
+  </div>
+-->
+
+<a
+  tabindex="0"
+  data-toggle="popover"
+  data-trigger="focus"
+  title="Carrinho"
+  data-html="true"
+  data-placement="bottom"
+  data-content="<div>Teste</div>"
+  ><div class="carrinho-widget">
+    <img src="assets/imagens/tokaji-vineria-icone-carrinho.png" />
+    <span class="title">Carrinho</span>
+    <!-- <span class="badge badge-pill badge-danger">{{ qtd }}</span> -->
+    <span class="badge badge-pill badge-danger">{{
+      carrinhoService.qtdTotalCarrinho()
+    }}</span>
+  </div>
+</a>

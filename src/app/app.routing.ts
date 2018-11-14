@@ -31,6 +31,11 @@ const appRoutes: Routes = [
     loadChildren:
       "./dominio/harmonizacao/harmonizacao.module#HarmonizacaoModule"
   },
+
+  {
+    path: "carrinho",
+    loadChildren: "./dominio/carrinho/carrinho.module#CarrinhoModule"
+  },
   {
     path: "fornecedor",
     loadChildren: "./dominio/fornecedor/fornecedor.module#FornecedorModule"

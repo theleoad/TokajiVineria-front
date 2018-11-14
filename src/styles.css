@@ -18,7 +18,8 @@ th,
 tr,
 a,
 input,
-label {
+label,
+span {
   color: #343a40;
   font-family: "Mukta", sans-serif;
 }
