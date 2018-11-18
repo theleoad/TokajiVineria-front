@@ -10,6 +10,7 @@ import { AppComponent } from "./app.component";
 import { AlertModule } from "ngx-bootstrap";
 import { AppRouting } from "./app.routing";
 import { CarrinhoService } from "src/app/dominio/carrinho/carrinho.service";
+import { CarrinhoListComponent } from "src/app/dominio/carrinho/carrinho-list/carrinho-list.component";
 
 @NgModule({
   declarations: [AppComponent, CarrinhoWidget],
@@ -26,3 +27,5 @@ import { CarrinhoService } from "src/app/dominio/carrinho/carrinho.service";
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
+//, CarrinhoListComponent

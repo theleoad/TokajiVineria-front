@@ -1,42 +1,62 @@
 <h4>Carrinho</h4>
-<div *ngIf="itensCarrinho; else: ElseBlock">
-  <div class="margem" *ngFor="let itemCarrinho of itensCarrinho; let i = index">
-    <div>
-      <div class="row">
-        <div class="col-2">
-          <img
-            style="max-width:32px;"
-            class="small-img"
-            src="http://localhost:4200/assets/imagens/vinhos/tokaji-vineria-espumante-jp-extra-brut.png"
-          />
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <div *ngIf="itensCarrinho; else: ElseBlock">
+        <div
+          class="margem"
+          *ngFor="let itemCarrinho of itensCarrinho; let i = index"
+        >
+          <div class="row">
+            <div class="col-2 imagem-produto lign-self-center">
+              <img
+                src="http://localhost:4200/assets/imagens/vinhos/tokaji-vineria-espumante-jp-extra-brut.png"
+              />
+            </div>
+            <div class="col-3 align-self-center">
+              <p>{{ itemCarrinho.produto.nome }}</p>
+              <p class="quantidade-widget">
+                Quantidade: {{ itemCarrinho.quantidade }}
+              </p>
+              <p>
+                Vinho {{ itemCarrinho.produto.categoria.nome }}
+                {{ itemCarrinho.produto.nacionalidade.nome }}
+              </p>
+            </div>
+            <div class="col-4 align-self-center text-center">
+              <!-- aumentar diminuir e quantidade -->
+              <p>
+                <a (click)="diminuirQuantidadeItemCarrinho(i)">
+                  <i class="fas fa-minus-square"></i>
+                </a>
+                <span> {{ itemCarrinho.quantidade }} </span>
+                <a (click)="aumentarQuantidadeItemCarrinho(i)">
+                  <i class="fas fa-plus-square"></i>
+                </a>
+              </p>
+              <p>
+                <a class="btn btn-default" (click)="excluirItemCarrinho(i)">
+                  Remover
+                </a>
+              </p>
+            </div>
+            <div class="col-3 align-self-center">
+              <p>
+                R$
+                {{
+                  (
+                    itemCarrinho.produto.preco * itemCarrinho.quantidade
+                  ).toFixed(2)
+                }}
+              </p>
+
+              <!-- descricao -->
+            </div>
+          </div>
         </div>
-        <div class="col-4">
-          <p>R$ {{ itemCarrinho.produto.preco * itemCarrinho.quantidade }}</p>
-          <!-- descricao -->
-        </div>
-        <div class="col-3">
-          <!-- aumentar diminuir e quantidade -->
-          <button
-            class="btn btn-link"
-            (click)="diminuirQuantidadeItemCarrinho(i)"
-          >
-            -
-          </button>
-          <span>{{ itemCarrinho.quantidade }}</span>
-          <button
-            class="btn btn-link"
-            (click)="aumentarQuantidadeItemCarrinho(i)"
-          >
-            +
-          </button>
-        </div>
-        <div class="col-3">
-          <a class="btn btn-default" (click)="excluirItemCarrinho(i)">
-            <i class="fa fa-trash"></i>
-          </a>
-        </div>
+        <h4>Total dos produtos: R$ {{ valorTotalCarrinho().toFixed(2) }}</h4>
       </div>
     </div>
+    <div class="col-3"></div>
   </div>
-  <h4>Total dos produtos: R$ {{ valorTotalCarrinho() }}</h4>
 </div>

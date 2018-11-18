@@ -18,17 +18,17 @@ export class CarrinhoWidget implements OnInit {
   constructor(
     private router: Router,
     private carrinhoService: CarrinhoService
-  ) {
-    // this.carrinhoService.carrinhoObservable.subscribe((carrinho: Carrinho) => {
-    //   this.qtd = carrinho.qtdProduto;
-    // });
+  ) {}
+
+  ngOnInit() {
+    $('[rel="popover"]')
+      .popover({
+        container: "body",
+        html: true,
+        content: "<div><app-carrinho-list></app-carrinho-list></div>"
+      })
+      .click(function(e) {
+        e.preventDefault();
+      });
   }
-
-  ngOnInit() {}
-
-  // ngAfterViewChecked() {
-  //   $(function() {
-  //     $('[data-toggle="popover"]').popover();
-  //   });
-  // }
 }

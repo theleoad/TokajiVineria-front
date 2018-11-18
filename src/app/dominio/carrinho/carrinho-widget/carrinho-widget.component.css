@@ -36,3 +36,52 @@ img {
 .carrinho-widget a:hover {
   text-decoration: none;
 }
+
+.onclick-menu {
+  position: relative;
+  display: inline-block;
+}
+.onclick-menu:before {
+  content: "Carrinho";
+}
+.onclick-menu:focus {
+  /* clicking on label should toggle the menu */
+  pointer-events: none;
+}
+.onclick-menu:focus .onclick-menu-content {
+  /*  opacity is 1 in opened state (see below) */
+  opacity: 1;
+  visibility: visible;
+
+  /* don't let pointer-events affect descendant elements */
+  pointer-events: auto;
+}
+.onclick-menu-content {
+  position: absolute;
+  z-index: 1;
+
+  /* use opacity to fake immediate toggle */
+  opacity: 0;
+  visibility: hidden;
+}
+
+.onclick-menu-content {
+  background-color: white;
+  width: 300px;
+  margin-top: 19px;
+  margin-left: 0;
+  padding: 10px;
+  right: 0;
+}
+
+.onclick-menu-content:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}

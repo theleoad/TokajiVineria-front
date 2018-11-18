@@ -1,0 +1,18 @@
+.quantidade-widget {
+  display: none;
+}
+
+img {
+  width: 65px;
+}
+
+p,
+a {
+  margin: 0;
+  line-height: 18px;
+}
+
+button,
+a {
+  padding: 0;
+}
