@@ -10,10 +10,11 @@ import { AppComponent } from "./app.component";
 import { AlertModule } from "ngx-bootstrap";
 import { AppRouting } from "./app.routing";
 import { CarrinhoService } from "src/app/dominio/carrinho/carrinho.service";
-import { CarrinhoListComponent } from "src/app/dominio/carrinho/carrinho-list/carrinho-list.component";
+
+import { CarrinhoMiniComponent } from "src/app/dominio/carrinho/carrinho-mini/carrinho-mini.component";
 
 @NgModule({
-  declarations: [AppComponent, CarrinhoWidget],
+  declarations: [AppComponent, CarrinhoWidget, CarrinhoMiniComponent],
   imports: [
     BrowserModule,
     RouterModule,

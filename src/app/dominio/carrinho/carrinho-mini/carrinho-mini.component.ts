@@ -3,11 +3,11 @@ import { CarrinhoService } from "src/app/dominio/carrinho/carrinho.service";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "carrinho",
-  templateUrl: "./carrinho-list.component.html",
-  styleUrls: ["./carrinho-list.component.css"]
+  selector: "carrinho-mini",
+  templateUrl: "./carrinho-mini.component.html",
+  styleUrls: ["./carrinho-mini.component.css"]
 })
-export class CarrinhoListComponent implements OnInit {
+export class CarrinhoMiniComponent implements OnInit {
   itensCarrinho: ItemCarrinho[];
 
   constructor(private carrinhoService: CarrinhoService) {}

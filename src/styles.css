@@ -31,6 +31,11 @@ span {
 a {
   color: #ea0429;
 }
+
+a:hover {
+  cursor: pointer !important;
+}
+
 .container-adm {
   padding-top: 10px;
 }

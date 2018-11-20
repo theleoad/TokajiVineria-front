@@ -2,7 +2,7 @@
   <h1>Seu Carrinho</h1>
   <div class="container">
     <div class="row" *ngIf="itensCarrinho; else: ElseBlock">
-      <div class="col-9">
+      <div class="col-12">
         <div>
           <div
             class="box-carrinho"
@@ -10,43 +10,20 @@
           >
             <div class="row">
               <div
-                class="col-2 imagem-produto text-center lign-self-center p-1"
+                class="col-3 imagem-produto text-center lign-self-center p-1"
               >
                 <img
                   src="http://localhost:4200/assets/imagens/vinhos/tokaji-vineria-espumante-jp-extra-brut.png"
                 />
               </div>
-              <div class="col-3 align-self-center">
+              <div class="col-5 align-self-center">
                 <p class="nome-produto">{{ itemCarrinho.produto.nome }}</p>
                 <p class="quantidade-widget">
                   Quantidade: {{ itemCarrinho.quantidade }}
                 </p>
-                <p class="sobre-produto">
-                  Vinho {{ itemCarrinho.produto.categoria.nome }}
-                  {{ itemCarrinho.produto.nacionalidade.nome }}
-                </p>
               </div>
+
               <div class="col-4 align-self-center text-center">
-                <!-- aumentar diminuir e quantidade -->
-                <div class="flex justify-content-center">
-                  <div class="inline-block align-self-center carrinho-qtd">
-                    <span>{{ itemCarrinho.quantidade }}</span>
-                  </div>
-                  <div class="inline-block">
-                    <div class="lh0">
-                      <a (click)="aumentarQuantidadeItemCarrinho(i)">
-                        <i class="fas fa-plus-circle"></i>
-                      </a>
-                    </div>
-                    <div class="lh0">
-                      <a (click)="diminuirQuantidadeItemCarrinho(i)">
-                        <i class="fas fa-minus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3 align-self-center text-center">
                 <p class="font-weight-bold">
                   R$
                   {{
@@ -65,7 +42,6 @@
           </h5>
         </div>
       </div>
-      <div class="col-3"><div class="promocao"></div></div>
     </div>
   </div>
   <ng-template #ElseBlock>

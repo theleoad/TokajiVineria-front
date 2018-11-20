@@ -25,7 +25,7 @@ export class CarrinhoWidget implements OnInit {
       .popover({
         container: "body",
         html: true,
-        content: "<div><app-carrinho-list></app-carrinho-list></div>"
+        content: "<div><carrinho-mini></carrinho-mini></div>"
       })
       .click(function(e) {
         e.preventDefault();
