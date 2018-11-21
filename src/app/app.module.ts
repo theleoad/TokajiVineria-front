@@ -12,6 +12,7 @@ import { AppRouting } from "./app.routing";
 import { CarrinhoService } from "src/app/dominio/carrinho/carrinho.service";
 
 import { CarrinhoMiniComponent } from "src/app/dominio/carrinho/carrinho-mini/carrinho-mini.component";
+import { FavoritoService } from "src/app/dominio/favorito/favorito.service";
 
 @NgModule({
   declarations: [AppComponent, CarrinhoWidget, CarrinhoMiniComponent],
@@ -24,7 +25,7 @@ import { CarrinhoMiniComponent } from "src/app/dominio/carrinho/carrinho-mini/ca
     // app
     AppRouting
   ],
-  providers: [CarrinhoService, ProdutoService],
+  providers: [CarrinhoService, ProdutoService, FavoritoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

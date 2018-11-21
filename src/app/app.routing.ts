@@ -52,6 +52,10 @@ const appRoutes: Routes = [
     path: "emconstrucao",
     loadChildren:
       "./dominio/emconstrucao/emconstrucao.module#EmconstrucaoModule"
+  },
+  {
+    path: "favoritos",
+    loadChildren: "./dominio/favorito/favorito.module#FavoritoModule"
   }
 ];
 

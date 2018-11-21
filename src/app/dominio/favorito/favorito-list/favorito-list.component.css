@@ -1,0 +1,52 @@
+.container.top {
+  padding: 0;
+}
+.quantidade-widget {
+  display: none;
+}
+
+img {
+  width: 65px;
+}
+
+p,
+a {
+  margin: 0;
+  line-height: 18px;
+}
+
+button,
+a {
+  padding: 0;
+}
+
+.box-carrinho {
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.carrinho-qtd {
+  margin-right: 10px;
+}
+
+.lh0 {
+  line-height: 0;
+}
+
+.nome-produto {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.sobre-produto {
+  font-size: 0.9rem;
+}
+
+.promocao {
+  height: calc(100% - 42px);
+  background-color: black;
+}

@@ -28,7 +28,11 @@
     </div>
     <div class="row favoritos">
       <div class="col-12 text-center">
-        <span><i class="fas fa-heart"></i> Meus Vinhos</span>
+        <span>
+          <a (click)="adicionarProdutoFavorito(produto)"
+            ><i class="fas fa-heart"></i> Meus Vinhos
+          </a>
+        </span>
       </div>
     </div>
   </div>

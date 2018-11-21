@@ -38,7 +38,7 @@ export class CarrinhoService {
     let total = 0;
     let quantidade = JSON.parse(localStorage.getItem("carrinho"));
     quantidade.forEach(element => {
-      total += element.quantidade;
+      total++;
     });
     return total;
   }

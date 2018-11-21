@@ -1,0 +1,75 @@
+<div class="container top">
+  <h1>Seus Vinhos Favoritos</h1>
+  <div class="container">
+    <div class="row" *ngIf="itensFavorito; else: ElseBlock">
+      <div class="col-9">
+        <div>
+          <div
+            class="box-carrinho"
+            *ngFor="let itemFavorito of itensFavorito; let i = index"
+          >
+            <div class="row">
+              <div
+                class="col-2 imagem-produto text-center lign-self-center p-1"
+              >
+                <img
+                  src="http://localhost:4200/assets/imagens/vinhos/tokaji-vineria-espumante-jp-extra-brut.png"
+                />
+              </div>
+              <div class="col-3 align-self-center">
+                <p class="nome-produto">{{ itemFavorito.produto.nome }}</p>
+                <p class="quantidade-widget">
+                  Quantidade: {{ itemFavorito.quantidade }}
+                </p>
+                <p class="sobre-produto">
+                  Vinho {{ itemFavorito.produto.categoria.nome }}
+                  {{ itemFavorito.produto.nacionalidade.nome }}
+                </p>
+              </div>
+              <div class="col-4 align-self-center text-center">
+                <!-- aumentar diminuir e quantidade -->
+                <div class="flex justify-content-center">
+                  <div class="inline-block align-self-center carrinho-qtd">
+                    <span>{{ itemFavorito.quantidade }}</span>
+                  </div>
+                  <div class="inline-block">
+                    <div class="lh0">
+                      <a (click)="aumentarQuantidadeItemFavorito(i)">
+                        <i class="fas fa-plus-circle"></i>
+                      </a>
+                    </div>
+                    <div class="lh0">
+                      <a (click)="diminuirQuantidadeItemFavorito(i)">
+                        <i class="fas fa-minus-circle"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 align-self-center text-center">
+                <p class="font-weight-bold">
+                  R$
+                  {{
+                    (
+                      itemFavorito.produto.preco * itemFavorito.quantidade
+                    ).toFixed(2)
+                  }}
+                </p>
+
+                <!-- descricao -->
+              </div>
+            </div>
+          </div>
+          <h5 class="text-right">
+            Total dos produtos: R$ {{ valorTotalFavorito().toFixed(2) }}
+          </h5>
+        </div>
+      </div>
+      <div class="col-3"><div class="promocao"></div></div>
+    </div>
+  </div>
+  <ng-template #ElseBlock>
+    <br /><br />
+    <h4>Seu carrinho está vazio aproveite os nossos produtos!</h4>
+  </ng-template>
+</div>

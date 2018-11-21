@@ -7,6 +7,7 @@ import { ProdutoService } from "../produto.service";
 import { Categoria } from "../../categoria/categoria";
 import { CategoriaService } from "../../categoria/categoria.service";
 import { CarrinhoService } from "../../carrinho/carrinho.service";
+import { FavoritoService } from "src/app/dominio/favorito/favorito.service";
 
 @Component({
   selector: "produtos-front",
@@ -19,6 +20,7 @@ export class ProdutosFrontComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private carrinhoService: CarrinhoService,
+    private favoritoService: FavoritoService,
     private router: Router
   ) {}
 
@@ -30,5 +32,9 @@ export class ProdutosFrontComponent implements OnInit {
 
   adicionarProduto(produto: Produto) {
     this.carrinhoService.inserirCarrinho(produto);
+  }
+
+  adicionarProdutoFavorito(produto: Produto) {
+    this.favoritoService.inserirFavorito(produto);
   }
 }
