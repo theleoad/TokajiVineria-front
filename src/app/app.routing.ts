@@ -56,10 +56,6 @@ const appRoutes: Routes = [
   {
     path: "novofor",
     loadChildren: "./dominio/fornecedor/novoFor/novoFor.module#NovoForModule"
-  },
-  {
-    path: "novofun",
-    loadChildren: "./dominio/funcionario/novoFun/novoFun.module#NovoFunModule"
   }
 ];
 

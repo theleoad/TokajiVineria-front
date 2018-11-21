@@ -1,0 +1,83 @@
+<!-- MEIO -->
+<div class="row meio">
+  <!-- MENU VERTICAL -->
+  <div class="col-2 col-md-3 menu-vertical">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['../produto']">
+          <img src="assets/imagens/tokaji-vineria-icone-produtos.png" />
+          <p>Produtos</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['../categoria']">
+          <img src="assets/imagens/tokaji-vineria-icone-categorias.png" />
+          <p>Categorias</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['../nacionalidade']">
+          <img src="assets/imagens/tokaji-vineria-icone-nacionalidades.png" />
+          <p>Nacionalidades</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['../harmonizacao']">
+          <img src="assets/imagens/tokaji-vineria-icone-harmonizacoes.png" />
+          <p>Harmonizações</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['../fornecedor']">
+          <img src="assets/imagens/tokaji-vineria-icone-fornecedores.png" />
+          <p>Fornecedores</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['../funcionario']">
+          <img src="assets/imagens/tokaji-vineria-icone-funcionarios.png" />
+          <p>Funcionários</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CONTEUDO -->
+  <div class="col-10 col-md-9">
+    <div class="container-adm">
+      <h1>Lista de Funcionário</h1>
+      <!-- start: page -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Operações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let funcionario of funcionarios">
+            <th>{{ funcionario.id }}</th>
+            <td>{{ funcionario.nome }}</td>
+            <td>
+              <a [routerLink]="['/funcionario/alterar', funcionario.id]"
+                >Alterar</a
+              >
+              |
+              <a
+                [routerLink]="['funcionario']"
+                (click)="excluir(funcionario.id)"
+                >Excluir</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a class="btn btn-primary" [routerLink]="['/funcionario/novo']"
+        >Adicionar Funcionário</a
+      >
+      <!-- end: page -->
+    </div>
+  </div>
+</div>
