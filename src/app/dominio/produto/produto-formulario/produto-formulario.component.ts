@@ -1,3 +1,5 @@
+import { FornecedorService } from "./../../fornecedor/fornecedor.service";
+import { Fornecedor } from "./../../fornecedor/fornecedor";
 import { HarmonizacaoService } from "./../../harmonizacao/harmonizacao.service";
 import { Harmonizacao } from "./../../harmonizacao/harmonizacao";
 import { NacionalidadeService } from "src/app/dominio/nacionalidade/nacionalidade.service";
@@ -23,6 +25,7 @@ export class ProdutoFormularioComponent implements OnInit {
   categorias: Categoria[];
   nacionalidades: Nacionalidade[];
   harmonizacaos: Harmonizacao[];
+  fornecedors: Fornecedor[];
 
   constructor(
     private route: ActivatedRoute,
@@ -31,7 +34,8 @@ export class ProdutoFormularioComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private nacionalidadeService: NacionalidadeService,
-    private harmonizacaoService: HarmonizacaoService
+    private harmonizacaoService: HarmonizacaoService,
+    private fornecedorService: FornecedorService
   ) {}
 
   ngOnInit() {
@@ -55,10 +59,16 @@ export class ProdutoFormularioComponent implements OnInit {
         preco: this.builder.control("", [Validators.required]),
         categoria: this.builder.control("", [Validators.required]),
         nacionalidade: this.builder.control("", [Validators.required]),
-        harmonizacao: this.builder.control("", [Validators.required])
+        harmonizacao: this.builder.control("", [Validators.required]),
+        fornecedor: this.builder.control("", [Validators.required])
       },
       {}
     );
+
+    // busca as harmonizacoes
+    this.fornecedorService.buscarTodos().subscribe(resposta => {
+      this.fornecedors = resposta;
+    });
 
     // busca as harmonizacoes
     this.harmonizacaoService.buscarTodos().subscribe(resposta => {

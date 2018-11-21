@@ -52,10 +52,6 @@ const appRoutes: Routes = [
     path: "emconstrucao",
     loadChildren:
       "./dominio/emconstrucao/emconstrucao.module#EmconstrucaoModule"
-  },
-  {
-    path: "novofor",
-    loadChildren: "./dominio/fornecedor/novoFor/novoFor.module#NovoForModule"
   }
 ];
 

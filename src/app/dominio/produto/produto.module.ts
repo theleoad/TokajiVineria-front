@@ -13,12 +13,10 @@ import { NacionalidadeService } from "src/app/dominio/nacionalidade/nacionalidad
 import { HarmonizacaoService } from "./../harmonizacao/harmonizacao.service";
 
 import { CarrinhoService } from "../carrinho/carrinho.service";
+import { FornecedorService } from "src/app/dominio/fornecedor/fornecedor.service";
 
 @NgModule({
-  declarations: [
-    ProdutoListaComponent,
-    ProdutoFormularioComponent
-  ],
+  declarations: [ProdutoListaComponent, ProdutoFormularioComponent],
   imports: [
     // Angular
     HttpModule,
@@ -35,6 +33,7 @@ import { CarrinhoService } from "../carrinho/carrinho.service";
     HarmonizacaoService,
     NacionalidadeService,
     CategoriaService,
+    FornecedorService,
     ProdutoService
   ]
 })
