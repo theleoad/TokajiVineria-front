@@ -18,7 +18,7 @@ export class FavoritoListComponent implements OnInit {
 
   aumentarQuantidadeItemFavorito(index: number) {
     this.itensFavorito[index].quantidade++;
-    localStorage.setItem("favorito", JSON.stringify(this.itensFavorito));
+    sessionStorage.setItem("favorito", JSON.stringify(this.itensFavorito));
   }
 
   diminuirQuantidadeItemFavorito(index: number) {
@@ -27,12 +27,12 @@ export class FavoritoListComponent implements OnInit {
     } else {
       this.itensFavorito[index].quantidade--;
     }
-    localStorage.setItem("favorito", JSON.stringify(this.itensFavorito));
+    sessionStorage.setItem("favorito", JSON.stringify(this.itensFavorito));
   }
 
   excluirItemFavorito(index: number) {
     this.itensFavorito.splice(index, 1);
-    localStorage.setItem("favorito", JSON.stringify(this.itensFavorito));
+    sessionStorage.setItem("favorito", JSON.stringify(this.itensFavorito));
   }
 
   valorTotalFavorito() {

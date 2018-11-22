@@ -1,7 +1,10 @@
 <div class="container top">
   <h1>Seu Carrinho</h1>
   <div class="container">
-    <div class="row" *ngIf="itensCarrinho; else: ElseBlock">
+    <div
+      class="row"
+      *ngIf="itensCarrinho || itensCarrinho.lenght === 0; else: ElseBlock"
+    >
       <div class="col-9">
         <div>
           <div

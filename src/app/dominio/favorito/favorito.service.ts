@@ -14,11 +14,11 @@ export class FavoritoService {
 
   inserirFavorito(produto: Produto) {
     // recebe um produto
-    this.favorito = JSON.parse(localStorage.getItem("favorito")); //pega a string do local storage e transforma em obj
+    this.favorito = JSON.parse(sessionStorage.getItem("favorito")); //pega a string do local storage e transforma em obj
     if (!this.favorito) {
       this.favorito = []; //tenho de resetar o objeto pois se o json estiver vazio ele vira null, e eu não posso dar push em algo null
       this.favorito.push(new ItemFavorito(produto, 1)); //inicia o obj itemFavorito com 1 na quantidade e manda para o favorito
-      localStorage.setItem("favorito", JSON.stringify(this.favorito)); //sobe o objeto para o local storage transformando ele em string no formato JSON
+      sessionStorage.setItem("favorito", JSON.stringify(this.favorito)); //sobe o objeto para o local storage transformando ele em string no formato JSON
     } else {
       //find ele volta uma referencia para algo que vc está pesquisando
       let itemEncontrado = this.favorito.find(
@@ -30,20 +30,20 @@ export class FavoritoService {
       } else {
         this.favorito.push(new ItemFavorito(produto, 1)); //se nao sobe um novo item para o favorito
       }
-      localStorage.setItem("favorito", JSON.stringify(this.favorito)); //independente do resultado tem de subir para o favorito
+      sessionStorage.setItem("favorito", JSON.stringify(this.favorito)); //independente do resultado tem de subir para o favorito
     }
   }
 
   qtdTotalFavorito() {
     let total = 0;
-    let quantidade = JSON.parse(localStorage.getItem("favorito"));
+    let quantidade = JSON.parse(sessionStorage.getItem("favorito"));
     quantidade.forEach(element => {
       total += element.quantidade;
     });
     return total;
   }
   consultarFavorito() {
-    return JSON.parse(localStorage.getItem("favorito"));
+    return JSON.parse(sessionStorage.getItem("favorito"));
   }
 }
 
