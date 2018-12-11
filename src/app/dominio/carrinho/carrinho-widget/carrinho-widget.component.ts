@@ -31,4 +31,6 @@ export class CarrinhoWidget implements OnInit {
         e.preventDefault();
       });
   }
-}
+} //trabalhar com bootstrap angular
+//componetizar tudo que dá
+// login socials

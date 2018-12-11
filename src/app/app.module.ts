@@ -1,3 +1,5 @@
+import { MenuHorizontalComponent } from "./dominio/menuHorizontal/menuHorizontal/menuHorizontal.component";
+import { TopoComponent } from "./dominio/topo/topo/topo.component";
 import { ProdutoService } from "src/app/dominio/produto/produto.service";
 import { CarrinhoWidget } from "./dominio/carrinho/carrinho-widget/carrinho-widget.component";
 import { BrowserModule } from "@angular/platform-browser";
@@ -15,7 +17,13 @@ import { CarrinhoMiniComponent } from "src/app/dominio/carrinho/carrinho-mini/ca
 import { FavoritoService } from "src/app/dominio/favorito/favorito.service";
 
 @NgModule({
-  declarations: [AppComponent, CarrinhoWidget, CarrinhoMiniComponent],
+  declarations: [
+    AppComponent,
+    CarrinhoWidget,
+    CarrinhoMiniComponent,
+    TopoComponent,
+    MenuHorizontalComponent
+  ],
   imports: [
     BrowserModule,
     RouterModule,

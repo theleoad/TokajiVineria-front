@@ -1,0 +1,44 @@
+.topo {
+  margin: 30px 0 0;
+  background-color: black;
+}
+.logo {
+  width: 210px;
+  padding: 20px 0;
+}
+
+.menu-icone {
+  margin-top: 32px;
+}
+
+.menu-icone img {
+  max-width: 28px;
+}
+
+.menu-icone span a {
+  color: #f8f9fa;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+}
+
+.menu-icone div div {
+  text-align: center;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 768px) {
+  .menu-icone {
+    justify-content: center !important;
+  }
+  .topo div {
+    text-align: center;
+  }
+  .topo {
+    padding-bottom: 10px;
+  }
+  .logo {
+    padding-bottom: 0;
+  }
+}

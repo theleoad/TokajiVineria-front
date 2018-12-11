@@ -1,0 +1,26 @@
+<div class="row topo">
+  <div class="col-12 col-md-5">
+    <img class="logo" src="assets/imagens/tokavi-vineria-logo-invertida.png" />
+  </div>
+  <div class="col-12 col-md-7">
+    <div class="row menu-icone">
+      <div class="col-2 offset-md-6">
+        <div>
+          <a [routerLink]="['areaadministrativa']">
+            <img src="assets/imagens/tokaji-vineria-icone-conta.png" />
+          </a>
+          <span> <a [routerLink]="['areaadministrativa']">Conta</a> </span>
+        </div>
+      </div>
+      <div class="col-2">
+        <div>
+          <a [routerLink]="['favoritos']">
+            <img src="assets/imagens/tokaji-vineria-icone-meus-vinhos.png" />
+          </a>
+          <span> <a [routerLink]="['favoritos']">Meus Vinhos</a> </span>
+        </div>
+      </div>
+      <div class="col-2"><carrinho-widget></carrinho-widget></div>
+    </div>
+  </div>
+</div>
