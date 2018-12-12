@@ -1,49 +1,51 @@
 <!-- MEIO -->
 <div class="row meio">
-
   <!-- MENU VERTICAL -->
-  <div class="col-2 col-md-3 menu-vertical">
+  <!--
+    <div class="col-2 col-md-3 menu-vertical">
 
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['../produto']">
-          <img src="assets/imagens/tokaji-vineria-icone-produtos.png" />
-          <p>Produtos</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['../categoria']">
-          <img src="assets/imagens/tokaji-vineria-icone-categorias.png" />
-          <p>Categorias</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['../nacionalidade']">
-          <img src="assets/imagens/tokaji-vineria-icone-nacionalidades.png" />
-          <p>Nacionalidades</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['../harmonizacao']">
-          <img src="assets/imagens/tokaji-vineria-icone-harmonizacoes.png" />
-          <p>Harmonizações</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['../fornecedor']">
-          <img src="assets/imagens/tokaji-vineria-icone-fornecedores.png" />
-          <p>Fornecedores</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['../funcionario']">
-          <img src="assets/imagens/tokaji-vineria-icone-funcionarios.png" />
-          <p>Funcionários</p>
-        </a>
-      </li>
-    </ul>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['../produto']">
+            <img src="assets/imagens/tokaji-vineria-icone-produtos.png" />
+            <p>Produtos</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['../categoria']">
+            <img src="assets/imagens/tokaji-vineria-icone-categorias.png" />
+            <p>Categorias</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['../nacionalidade']">
+            <img src="assets/imagens/tokaji-vineria-icone-nacionalidades.png" />
+            <p>Nacionalidades</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['../harmonizacao']">
+            <img src="assets/imagens/tokaji-vineria-icone-harmonizacoes.png" />
+            <p>Harmonizações</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['../fornecedor']">
+            <img src="assets/imagens/tokaji-vineria-icone-fornecedores.png" />
+            <p>Fornecedores</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['../funcionario']">
+            <img src="assets/imagens/tokaji-vineria-icone-funcionarios.png" />
+            <p>Funcionários</p>
+          </a>
+        </li>
+      </ul>
 
-  </div>
+    </div>
+  -->
+  <div class="col-2 col-md-3 p-0"><app-menuVertical></app-menuVertical></div>
 
   <!-- CONTEUDO -->
   <div class="col-10 col-md-9">
@@ -61,18 +63,22 @@
         </thead>
         <tbody>
           <tr *ngFor="let produto of produtos">
-            <th>{{produto.id}}</th>
-            <td>{{produto.nome}}</td>
-            <td>{{produto.preco}}</td>
+            <th>{{ produto.id }}</th>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.preco }}</td>
             <td>
-              <a [routerLink]="['/produto/alterar',produto.id]">Alterar</a> |
-              <a [routerLink]="['produto']" (click)="excluir(produto.id)">Excluir</a>
+              <a [routerLink]="['/produto/alterar', produto.id]">Alterar</a> |
+              <a [routerLink]="['produto']" (click)="excluir(produto.id)"
+                >Excluir</a
+              >
             </td>
           </tr>
         </tbody>
       </table>
 
-      <a class="btn btn-primary" [routerLink]="['/produto/novo']">Adicionar Produto</a>
+      <a class="btn btn-primary" [routerLink]="['/produto/novo']"
+        >Adicionar Produto</a
+      >
       <!-- end: page -->
     </div>
   </div>

@@ -1,3 +1,4 @@
+import { MenuVerticalComponent } from "./../menuVertical/menuVertical/menuVertical.component";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -10,7 +11,11 @@ import { CategoriaListaComponent } from "./categoria-lista/categoria-lista.compo
 import { CategoriaFormularioComponent } from "./categoria-formulario/categoria-formulario.component";
 
 @NgModule({
-  declarations: [CategoriaListaComponent, CategoriaFormularioComponent],
+  declarations: [
+    CategoriaListaComponent,
+    CategoriaFormularioComponent,
+    MenuVerticalComponent
+  ],
   imports: [
     // Angular
     HttpModule,

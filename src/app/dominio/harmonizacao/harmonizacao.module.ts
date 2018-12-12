@@ -8,9 +8,14 @@ import { HarmonizacaoRouting } from "./harmonizacao.routing";
 import { HarmonizacaoService } from "./harmonizacao.service";
 import { HarmonizacaoListaComponent } from "./harmonizacao-lista/harmonizacao-lista.component";
 import { HarmonizacaoFormularioComponent } from "./harmonizacao-formulario/harmonizacao-formulario.component";
+import { MenuVerticalComponent } from "src/app/dominio/menuVertical/menuVertical/menuVertical.component";
 
 @NgModule({
-  declarations: [HarmonizacaoListaComponent, HarmonizacaoFormularioComponent],
+  declarations: [
+    HarmonizacaoListaComponent,
+    HarmonizacaoFormularioComponent,
+    MenuVerticalComponent
+  ],
   imports: [
     // Angular
     HttpModule,

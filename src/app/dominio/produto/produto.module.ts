@@ -14,9 +14,14 @@ import { HarmonizacaoService } from "./../harmonizacao/harmonizacao.service";
 
 import { CarrinhoService } from "../carrinho/carrinho.service";
 import { FornecedorService } from "src/app/dominio/fornecedor/fornecedor.service";
+import { MenuVerticalComponent } from "src/app/dominio/menuVertical/menuVertical/menuVertical.component";
 
 @NgModule({
-  declarations: [ProdutoListaComponent, ProdutoFormularioComponent],
+  declarations: [
+    ProdutoListaComponent,
+    ProdutoFormularioComponent,
+    MenuVerticalComponent
+  ],
   imports: [
     // Angular
     HttpModule,
